@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  ul
+    li You requested: <code>#{method} #{url}</code>
+    li Server name: #{hostname}
+    li Server time: #{date}
+  hr
+  h2 Request headers
+  ul
+    each value, key in headers
+      li <code>#{key}: #{value}</code>
+  hr
+  h2 Request body
+  pre=body
