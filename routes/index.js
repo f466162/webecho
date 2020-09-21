@@ -7,6 +7,8 @@ router.all('/*', function(req, res, next) {
     res.render('index',
         {
             title: 'webecho',
+            sourceAddress: req.connection.remoteAddress,
+            sourcePort: req.connection.remotePort,
             hostname: os.hostname(),
             date: moment().format(),
             method: req.method,

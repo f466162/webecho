@@ -3,7 +3,8 @@ extends layout
 block content
   h1= title
   ul
-    li You requested: <code>#{method} #{url}</code>
+    li Method/request: <code>#{method} #{url}</code>
+    li Source address: <code>#{sourceAddress}:#{sourcePort}</code>
     li Server name: <code>#{hostname}</code>
     li Server time: <code>#{date}</code>
   h2 Request headers
