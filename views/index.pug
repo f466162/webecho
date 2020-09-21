@@ -4,13 +4,16 @@ block content
   h1= title
   ul
     li You requested: <code>#{method} #{url}</code>
-    li Server name: #{hostname}
-    li Server time: #{date}
-  hr
+    li Server name: <code>#{hostname}</code>
+    li Server time: <code>#{date}</code>
   h2 Request headers
-  ul
+  table
+    tr
+      th Header Name
+      th Header Value
     each value, key in headers
-      li <code>#{key}: #{value}</code>
-  hr
+      tr
+        td <code>#{key}</code>
+        td <code>#{value}</code>
   h2 Request body
   pre=body
